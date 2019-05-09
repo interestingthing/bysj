@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org:">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <meta content="description" name="description">
+  <meta name="google" content="notranslate" />
+  <meta content="Mashup templates have been developped by Orson.io team" name="author">
+
+  <!-- Disable tap highlight on IE -->
+  <meta name="msapplication-tap-highlight" content="no">
+  
+  <link rel="apple-touch-icon" sizes="180x180" src="/bysj/img/indexdemo-1.png"/>
+  <link href="./assets/favicon.ico" rel="icon">
+  
+  <title>Title page</title>  
+
+<link href="/bysj/css/indexdemo-1.css" rel="stylesheet"></head>
+
+<body>
+
+ <!-- Add your content of header -->
+
+<header>
+  <nav class="navbar navbar-fixed-top navbar-default">
+    <div class="container">
+        <button type="button" class="navbar-toggle">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        
+      <nav class="navbar-fullscreen" id="navbar-middle">
+        <button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <ul class="navbar-fullscreen-links">
+
+            <li class="f-item">欢迎您！&nbsp;&nbsp;</li>
+            <div class="f-item" th:if="${session.username}">
+              <li class="f-item" th:if="${session.username}" th:text="${session.username}"></li>
+              <li class="f-item">&nbsp;&nbsp;<a th:href="@{/user/logout}" target="_blank">注销</a>&nbsp;&nbsp;</li>
+            </div>
+
+            <div class="f-item" th:unless="${session.username}">
+              <li class="f-item">&nbsp;&nbsp;请<a href="login.html" >登录</a>&nbsp;&nbsp;</li>
+              <span><a href="register.html" >免费注册</a></span>
+            </div>
+          <li><a href="index.html" title="">主页</a></li>
+          <li><a href="search.html" title="">搜索</a></li>
+          <li><a href="add_res.html" title="">添加商户</a></li>
+          <li><a href="user.html" title="">个人中心</a></li>
+        </ul>
+
+        <div class="footer-container">
+        </div>
+
+
+      </nav> 
+    
+    </div>
+  </nav>
+</header>
+
+  
+<div class="hero-full-container background-image-container white-text-container" style="background-image:url(/bysj/img/1.jpg)">
+  <div class="overlay-gradient"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-7 col-md-offset-1">
+        <div class="hero-full-wrapper">
+          <div class="text-content">
+            <h1>欢迎使用餐饮信息查询系统</h1>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function (event) {
+    navbarFixedTopAnimation();
+    closeMenuBeforeGoingToPage();
+  });
+</script>
+
+
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function (event) {
+      navbarToggleSidebar();
+      closeMenuBeforeGoingToPage();
+      navActivePage();
+    });
+</script>
+ <script type="text/javascript" src="/bysj/js/indexdemo-2.js"></script></body>
+
+</html>

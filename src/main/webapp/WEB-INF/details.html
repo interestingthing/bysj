@@ -1,0 +1,133 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="lx:category" content="dianping_nova">
+    <meta name="lx:appnm" content="dp_pc">
+    <meta name="lx:cid" content="c_0pd2xsxh">
+    <meta name="lx:autopv" content="off"/>
+    <link rel="dns-prefetch" href="//analytics.meituan.net"/>
+
+    <link rel="stylesheet" type="text/css" href="/bysj/css/index-1.css">
+    <!-- 图文混排css -->
+    <link rel="stylesheet" type="text/css" href="/bysj/css/index-2.css">
+    <link rel="stylesheet" href="/bysj/css/index-3.css" type="text/css"/>
+    <link rel="stylesheet" href="/bysj/css/index-4.css" type="text/css"/>
+
+
+</head>
+<body>
+<!--页头部分-->
+<div class="header-container">
+    <div id="top-nav" class="top-nav">
+        <div class="top-nav-container clearfix">
+            <div class="group mini-logo Hide"><a rel="nofollow" target="_blank" class="item" href=""><i
+                    class="icon-logo"></i>大众点评首页</a></div>
+            <div class="group quick-menu ">
+                <span class="seprate">|</span> <span class="login-container J-login-container"> <a rel="nofollow"
+                                                                                                   class="item "
+                                                                                                   href="login.html"
+                                                                                                   data-click-name="login">你好，请登录</a> <a
+                    rel="nofollow" class="item login" href="register.html"
+                    data-click-name="reg">免费注册</a>  <a rel="nofollow" class="item login" href="user.html"
+                                                       data-click-name="reg">个人中心</a></span>
+            </div>
+            <div class="panel my-center J-my-center-target Hide"></div>
+
+            <div class="panel site-nav J-site-target Hide"></div>
+        </div>
+    </div>
+    <div id="logo-input" class="logo-input">
+        <div class="logo-input-container clearfix"><a title="大众点评网" href="/" class="logo"></a>
+            <div class="search-box">
+                <div class="search-box">
+                    <div class="search-bar "> <span class="search-container clearfix"> <i
+                            class="i-search"></i> <span> <input id="J-search-input"
+                                                                class="J-search-input" x-webkit-speech=""
+                                                                x-webkit-grammar="builtin:translate"
+                                                                data-s-pattern="https://www.dianping.com/search/keyword/{0}/{1}_"
+                                                                data-s-epattern="https://www.dianping.com/xian/{0}"
+                                                                data-s-cateid="0" data-s-cityid="1" type="text"
+                                                                placeholder="搜索商户名" autocomplete="off"/> </span> <span
+                            class="search-bnt-panel"> <a target="_blank"
+                                                         class="search-btn J-search-btn" id="J-all-btn"
+                                                         data-s-chanid="0">商户查询</a>
+										 <a target="_blank"
+                                            class="search-btn J-search-btn" id="J-all-btn"
+                                            data-s-chanid="0">地址查询</a></span>
+										
+									</span>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cate-container search-cate-container">
+
+        <div class="gradient"></div>
+        <div id="cate-index" class="cate-index"></div>
+    </div>
+</div>
+
+
+<div class="section Fix J-shop-search">
+    <div class="navigation">
+        <!-- 频道 -->
+
+        <!-- 分类 -->
+        <div class="nav-category J_filter_category">
+            <h4>分类:</h4>
+            <a href="" class="def cur" data-cat-id="0"
+               data-click-name="select_cate_all_click"><span>不限</span></a>
+            <div class="nc-contain">
+                <div class="con">
+                    <div id="classfy" class="nc-items">
+                        <a href=""><span>火锅</span></a>
+                        <a href=""><span>甜品</span></a>
+                        <a href=""><span>烧烤</span></a>
+                        <a href=""><span>面食</span></a>
+                        <a href=""><span>快餐</span></a>
+                        <a href=""><span>西餐</span></a>
+                        <a href=""><span>川湘菜</span></a>
+                        <a href=""><span>日韩料理</span></a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- 分类 end -->
+
+        <div>
+            <img id="res_imges" src="">
+        </div>
+        <div>
+
+            <div  id="details_name" style="margin:20px 0; heigth:90px; font-size: 60px;">
+                餐厅名称:<span th:text="${detail.name}"></span>
+            </div>
+            <div id="details_time" style="margin:20px 0; heigth:90px; font-size: 30px;">
+                营业时间:<span th:text="${detail.time}"></span>
+            </div>
+            <div id="details_phone" style="margin:20px 0; heigth:90px; font-size: 40px;">
+                电话:<span th:text="${detail.phone}"></span>
+            </div>
+            <div id="details_adress" style="margin:20px 0; heigth:90px; font-size: 50px;">
+                地址:<span th:text="${detail.address}"></span>
+            </div>
+            <div id="details_comment" style="margin:20px 0; heigth:90px; font-size: 20px;">
+                好评数:<span th:text="${detail.comment}"></span>
+            </div>
+            <div id="details_category" style="margin:20px 0;heigth:90px; font-size: 30px;">
+                餐厅分类:<span th:text="${detail.category}"></span>
+            </div>
+            <div id="details_options" style="margin:10px 0;heigth:90px; font-size: 30px;border: 1px solid gainsboro;">
+                <p>餐厅菜单</p>
+                <p>菜单</p>
+                <span th:text="${detail.options}"></span>
+            </div>
+
+
+        </div>
+
+
+</html>
